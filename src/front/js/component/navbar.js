@@ -24,18 +24,18 @@ export const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-transparent m-3">
             <div className="container">
-                <div className="collapse navbar-collapse d-flex justify-content-center menu" id="navbarNavDropdown">
+                <div className="collapse navbar-collapse d-flex justify-content-end menu" id="navbarNavDropdown">
                     <ul className="navbar-nav">
                         {token ?
                             (
                                 <li className="nav-item">
-                                    <a className="nav-link active text-dark mx-3 btn-cs" aria-current="page" onClick={() => logout()}><strong>Cerrar Sesión</strong></a>
+                                    <a className="nav-link active text-dark mx-3 btn-cs cursor-pointer" aria-current="page" onClick={() => logout()}><strong>Cerrar Sesión</strong></a>
                                 </li>
                             ) :
                             (
                                 <>
                                     <li className="nav-item">
-                                        <Link className="nav-link active text-dark register mx-3" aria-current="page" to="/register"><strong>Registrate</strong></Link>
+                                        <Link className="nav-link active text-dark register mx-3" aria-current="page" to="/"><strong>Registrate</strong></Link>
                                     </li>
                                     <li className="nav-item dropdown">
                                         <Link className="nav-link active text-dark login" aria-current="page" to="/login"><strong>Inicio Sesion</strong></Link>
@@ -49,4 +49,4 @@ export const Navbar = () => {
             </div>
         </nav>
     );
-}; ''
+};
